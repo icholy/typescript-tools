@@ -461,7 +461,7 @@ endfunction
 "TODO: guard tss usage in later functions
 " start typescript service process asynchronously, via python
 " NOTE: one reason for shell=True is to avoid popup console window;
-command! -nargs=? TSSstart call TSSstart(<f-args>)
+command! -nargs=* TSSstart call TSSstart(<f-args>)
 command! TSSstarthere call TSSstart(expand("%"))
 function! TSSstart(...)
 echomsg "starting TSS ..."
